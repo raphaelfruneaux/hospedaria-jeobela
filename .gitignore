@@ -60,3 +60,5 @@ typings/
 
 # Dist and public folders
 dist/
+
+.DS_Store

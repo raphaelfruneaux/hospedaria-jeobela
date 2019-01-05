@@ -17,8 +17,8 @@ const paths = {
     dest: './dist/'
   },
   images: {
-    src: 'src/assets/images/**/*',
-    dest: './dist/assets/images/'
+    src: 'src/assets/img/**/*',
+    dest: './dist/img/'
   },
   html: {
     src: 'src/**/*.html',
@@ -50,7 +50,8 @@ gulp.task('scripts', scripts);
 
 
 const images = () => {
-  return gulp.src(paths.images.src).pipe(gulp.dest(paths.images.dest));
+  return gulp.src(paths.images.src)
+    .pipe(gulp.dest(paths.images.dest));
 };
 
 
@@ -71,7 +72,8 @@ const serve = () => {
     server: "./dist"
   });
 
-  gulp.watch(paths.styles.src, styles);
+  gulp.watch(paths.styles.src).on('change', gulp.series(styles, browserSync.reload));
+  gulp.watch(paths.images.src).on('change', gulp.series(images, browserSync.reload));
   gulp.watch(paths.html.src).on('change', gulp.series(html, browserSync.reload));
 }
 gulp.task('default', gulp.series(gulp.parallel(styles, scripts, images, html), serve));
