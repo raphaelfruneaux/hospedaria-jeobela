@@ -2,8 +2,9 @@
  * index.scss
  */
 
-$bg-color: #fcfdfe;
-$bg-top-color: #a4d8cc;
+// $bg-color: #fcfdfe;
+$bg-color: #f1f1f2;
+// $bg-top-color: #a4d8cc;
 
 * {
   box-sizing: border-box;
@@ -49,6 +50,10 @@ q:before, q:after {
 	content: none;
 }
 
+b, strong {
+  font-weight: bold;
+}
+
 html, body {
   height: 100%;
 }
@@ -56,4 +61,75 @@ html, body {
 body {
   background: $bg-color;
   text-align: center;
+
+  font-family: 'Open Sans', sans-serif;
+
+  // background-image: url(/img/praia-massarandupio-bg01.jpg);
+  // background-position: center;
+  // background-size: cover;
+  // background-repeat: no-repeat;
+}
+
+.bolder {
+  color: #5c1213;
+  font-weight: bolder;
+}
+
+a {
+  font-weight: 500;
+  color: #85c553;
+
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    color: #5c1213;
+  }
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+address {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 20px;
+  text-align: center;
+  line-height: 1.8em;
+}
+
+
+.jumbo-message {
+  padding-top: 100px;
+}
+
+.brand { margin-bottom: 40px; }
+
+.logo { margin-bottom: 20px; }
+
+.whatsapp {
+  position: relative;
+  padding-right: 20px;
+
+  &:after {
+    position: absolute;
+    right: 0;
+    font-family: "Font Awesome 5 Brands";
+    content: "\f232";
+  }
+}
+
+.social-medias {
+  padding-top: 20px;
+  font-size: 1.8rem;
+
+  li {
+    display: inline-block;
+    margin: 0 13px;
+
+    a {
+      color: #111;
+    }
+  }
 }
