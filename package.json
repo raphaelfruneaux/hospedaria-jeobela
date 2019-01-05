@@ -1,0 +1,23 @@
+{
+  "name": "hospedaria-jeobela",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphaelfruneaux/hospedaria-jeobela.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raphaelfruneaux/hospedaria-jeobela/issues"
+  },
+  "homepage": "https://github.com/raphaelfruneaux/hospedaria-jeobela#readme",
+  "devDependencies": {
+    "del": "^3.0.0",
+    "gulp": "^4.0.0"
+  }
+}
